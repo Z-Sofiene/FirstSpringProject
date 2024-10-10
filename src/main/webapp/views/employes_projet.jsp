@@ -28,7 +28,7 @@
                 <tr>
                     <th scope="col">Name</th>
                     <th scope="col">Role</th>
-                    <th scope="col">Actions</th>
+
                 </tr>
             </thead>
             <tbody>
@@ -36,23 +36,12 @@
                     <tr>
                         <td>${emps.nom}</td>
                         <td>${emps.fonction}</td>
-                        <td>
-                            <!-- Delete Employee Action -->
-                            <form:form action="deleteEmploye/${emps.id}" method="get">
-                                <button type="submit" class="btn btn-danger">
-                                    <i class="fas fa-trash-alt"></i> Delete
-                                </button>
-                            </form:form>
-                        </td>
+
                     </tr>
                 </c:forEach>
             </tbody>
         </table>
 
-        <!-- Add New Employee Button -->
-        <a href="${pageContext.request.contextPath}/addEmployeForm" class="btn btn-primary mt-3">
-            <i class="fas fa-plus"></i> Add New Employee
-        </a>
     </div>
 
  

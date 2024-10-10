@@ -25,7 +25,7 @@
             <thead>
                 <tr>
                     <th scope="col">Title</th>
-                    <th scope="col">Status</th> <!-- Added status column -->
+                    <th scope="col">Status</th>
                     <th scope="col">Actions</th>
                     <th scope="col">Extras</th>
                 </tr>
@@ -51,7 +51,6 @@
             </tbody>
         </table>
 
-        <!-- Add New Project Button -->
         <a href="${pageContext.request.contextPath}/addProjetForm" class="btn btn-primary mt-3">
             <i class="fas fa-plus"></i> Add New Project
         </a>

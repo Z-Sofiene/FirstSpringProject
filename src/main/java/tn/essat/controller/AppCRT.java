@@ -80,7 +80,7 @@ public class AppCRT {
 	    
 	    return "addEmploye";
 	}
-
+	
 	
 	@PostMapping("/saveEmploye") //OK
 	public String saveEmploye(Model m, @ModelAttribute Employe emp) {
@@ -130,7 +130,7 @@ public class AppCRT {
 	    return "redirect:/home";
 	}
 
-	@GetMapping("/projets/dept//deleteProjet/{id}") //OK
+	@GetMapping("/projets/dept/deleteProjet/{id}") //OK
 	public String deleteProjet(Model m, @PathVariable("id") int id) {
 	    
 	    Optional<Projet> proj = daoProj.findById(id);
@@ -150,7 +150,7 @@ public class AppCRT {
 	
 
 	@GetMapping("/employes/projet/{id}") //OK
-	public String getAllEmployesByprojet(Model m, @PathVariable("id") int id) {
+	public String getAllEmployesByProjet(Model m, @PathVariable("id") int id) {
 		List<Employe> liste = daoEmp.getAllEmployesByProjet(id);
 		Optional<Projet> proj = daoProj.findById(id);
 	    m.addAttribute("emps", liste);

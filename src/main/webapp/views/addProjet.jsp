@@ -29,14 +29,12 @@
                     <form:option value="" label="-- Select Status --"/>
                     <form:option value="Loading">Loading</form:option>
                     <form:option value="Active">Active</form:option>
-                    <form:option value="Not Active">Not Active</form:option>
+                    <form:option value="Not Active">Achieved</form:option>
                 </form:select>
             </div>
             <div class="form-group">
                 <form:label path="dept.id">Department:</form:label>
-                <form:select path="dept.id" class="form-control" required="true">
-                    <form:option value="" label="-- Select Department --"/>
-                    <form:options items="${dpt}" itemValue="id" itemLabel="nom"/>
+                <form:select path="dept.id" class="form-control" items="${dpt}" itemValue="id" itemLabel="nom">
                 </form:select>
             </div>
 

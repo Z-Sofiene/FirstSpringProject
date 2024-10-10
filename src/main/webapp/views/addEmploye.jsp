@@ -25,18 +25,22 @@
             </div>
             <div class="form-group">
                 <form:label path="fonction">Function:</form:label>
-                <form:input path="fonction" type="text" class="form-control" required="true"/>
+                <form:select path="fonction" class="form-control" required="true">
+                    <form:option value="" label="-- Select Function --"/>
+                    <form:option value="Manager">Manager</form:option>
+                    <form:option value="Engineer">Engineer</form:option>
+                    <form:option value="Technician">Technician</form:option>
+                    <form:option value="Student">Student</form:option>
+                </form:select>
             </div>
             <div class="form-group">
                 <form:label path="dept">Department:</form:label>
-                <form:select path="dept.id" class="form-control" required="true">
-                    <form:option value="" label="-- Select Department --"/>
-                    <form:options items="${departements}" itemValue="id" itemLabel="nom"/>
+                <form:select path="dept.id" class="form-control" items="${departements}" itemValue="id" itemLabel="nom">
                 </form:select>
             </div>
             <div class="form-group">
                 <form:label path="projet">Project:</form:label>
-                <form:select path="projet.id" class="form-control" required="true">
+                <form:select path="projet.id" class="form-control">
                     <form:option value="" label="-- Select Project --"/>
                     <form:options items="${projets}" itemValue="id" itemLabel="titre"/>
                 </form:select>

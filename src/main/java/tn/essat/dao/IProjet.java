@@ -11,9 +11,9 @@ import tn.essat.model.Projet;
 
 @Repository
 public interface IProjet extends JpaRepository<Projet, Integer>{
-	
+	//DSL
 	public List<Projet> findByEtat(String etat);
-	
+	//JPQL
 	@Query("select p from Projet p where p.dept.id=:x")
 	public List<Projet> getAllProjetsByDept(@Param("x") int id);
 
